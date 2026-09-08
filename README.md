@@ -1,16 +1,79 @@
-# React + Vite
+# AI Resume Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI-powered resume screening and candidate comparison platform.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+AI Resume Analyzer helps recruiters compare multiple resumes against
+a specific job requirement and generate ranked candidate recommendations.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Admin authentication
+- Multiple resume upload
+- PDF and DOCX parsing
+- Job requirement analysis
+- AI-powered candidate scoring
+- Candidate ranking
+- Strengths and gaps analysis
+- Local AI inference with Ollama
+- Privacy-conscious in-memory file processing
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+- React
+- Vite
+- React Router
+- CSS
+
+### Backend
+- Node.js
+- Express
+- Multer
+- JWT
+
+### AI
+- Ollama
+- Llama 3.2 3B
+
+### Document Processing
+- pdf-parse
+- Mammoth
+
+## Architecture
+
+React
+↓
+Express API
+↓
+Resume Parser
+↓
+Ollama
+↓
+AI Analysis
+↓
+Candidate Ranking
+↓
+React Dashboard
+
+## Version
+
+v1.0.0
+
+## Current Limitations
+
+- Image-only/scanned PDFs require OCR.
+- Analysis quality depends on the local model.
+- Large batches may take longer because resumes are processed sequentially.
+- AI output is an assistive recommendation and should not replace human review.
+
+## Future Roadmap
+
+- OCR support
+- Better candidate comparison
+- Persistent analysis history
+- Candidate profiles
+- Advanced scoring controls
+- More AI models
+- Analytics dashboard
